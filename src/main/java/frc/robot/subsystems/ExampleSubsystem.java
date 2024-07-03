@@ -20,6 +20,7 @@ public class ExampleSubsystem extends SubsystemBase {
     spinHowMuch = new VoltageOut(0);
     var coolConfigs = new TalonFXConfiguration();
     coolConfigs.MotorOutput.Inverted = InvertedValue.CounterClockwise_Positive;
+    coolMotor.getConfigurator().apply(coolConfigs);
   }
 
   /**
